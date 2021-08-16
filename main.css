@@ -1,0 +1,209 @@
+/* general styling & reset */
+:root {
+    --very-dark-blue: hsl(217, 19%, 35%);
+    --light-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0px 12px;
+    background: var(--light-grayish-blue);
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* utilities */
+.dark {
+    color: var(--very-dark-blue);
+}
+
+.light {
+    color: var(--light-dark-blue);
+}
+
+/* prev article */
+.prev {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 730px;
+    margin: 200px auto 0px auto;
+    overflow: visible;
+}
+
+.prev .prevImg {
+    max-width: 290px;
+    flex: 0 1 40%;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.prev .prevContent {
+    flex: 0 1 60%;
+    padding: 35px 40px 25px;
+    background-color: hsl(217, 0%, 100%);
+    border-radius: 0px 5px 5px 0px;
+}
+
+.prevContent .prevContentTitle {
+    margin-bottom: 12.5px;
+}
+
+.prevContent .prevContentText {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.prevContent .prevContentAuthor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.prevContentAuthor .contentAuthor {
+    display: flex;
+    align-items: center;
+}
+
+.contentAuthor .contentAuthorImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.contentAuthor .contentAuthorText {
+    font-size: 11.25px;
+}
+
+.contentAuthorText .AuthorTextDate {
+    color: var(--light-dark-blue);
+}
+
+.contentAuthorShare .authorShareIcon {
+    margin-top: 3px;
+    padding: 8px;
+    background-color: var(--light-grayish-blue);
+    border-radius: 50%;
+}
+
+.contentAuthorShare .shareIconContainer {
+    margin-top: 5px;
+    padding: 6px 8px;
+    background-color: var(--light-grayish-blue);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.contentAuthorShare.active .shareIconContainer {
+    background-color: var(--light-dark-blue);
+}
+
+.contentAuthorShare.active svg .shareIcon {
+    fill: white;
+}
+
+.contentAuthorShare .authorShareBox {
+    width: 250px;
+    padding: 16px 18px;
+    display: none;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    top: -80px;
+    left: 60%;
+    background-color: var(--very-dark-blue);
+    border-radius: 9px;
+}
+
+.contentAuthorShare.active .authorShareBox {
+    display: flex;
+}
+
+.contentAuthorShare .authorShareBox::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 80%;
+    right: 45%;
+    transform: rotate(45deg);
+    background: var(--very-dark-blue);
+}
+
+.authorShareBox .shareBoxText {
+    font-size: 12.5px;
+    letter-spacing: 4.5px;
+    color: var(--grayish-blue);
+}
+
+@media screen and (max-width: 870px) {
+    .prev {
+        flex-direction: column;
+        align-items: center;
+        max-width: 330px;
+        margin-top: 50px;
+    }
+
+    .prev .prevImg {
+        max-width: 100%;
+        width: 100%;
+        max-height: 205px;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .prev .prevContent {
+        padding: 30px 37px 20px 37px;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .prevContent .prevContentTitle {
+        font-size: 15.5px;
+    }
+
+    .contentAuthorShare .shareIconContainer {
+        position: relative;
+        z-index: 4;
+    }
+
+    .contentAuthorShare .authorShareBox {
+        width: 329px;
+        left: -37.5px;
+        top: -7px;
+        border-radius: 0 0 9px 9px;
+        justify-content: flex-start;
+        padding: 20px 18px;
+    }
+
+    .contentAuthorShare .authorShareBox::after {
+        display: none;
+    }
+
+    .authorShareBox .shareBoxText {
+        margin-left: 20px;
+        margin-right: 18px;
+    }
+
+    .authorShareBox * {
+        margin-right: 8.25px;
+    }
+}

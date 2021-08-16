@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- fonts and favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="main.css" />
+
+        <!-- title -->
+        <title>Article preview component</title>
+    </head>
+    <body>
+        <article class="prev">
+            <img src="images/drawers.jpg" alt="Drawers" class="prevImg" />
+
+            <div class="prevContent">
+                <h2 class="prevContentTitle dark">
+                    Shift the overall look and feel by adding these wonderful
+                    touches to furniture in your home
+                </h2>
+
+                <p class="prevContentText light">
+                    Ever been in a room and felt like something was missing?
+                    Perhaps it felt slightly bare and uninviting. I’ve got some
+                    simple tips to help you make any room feel complete.
+                </p>
+
+                <div class="prevContentAuthor">
+                    <div class="contentAuthor">
+                        <img
+                            src="images/avatar-michelle.jpg"
+                            alt="Author Image"
+                            class="contentAuthorImg"
+                        />
+
+                        <div class="contentAuthorText">
+                            <h3 class="AuthorTextTitle dark">
+                                Michelle Appleton
+                            </h3>
+
+                            <p class="AuthorTextDate">28 Jun 2020</p>
+                        </div>
+                    </div>
+
+                    <div class="contentAuthorShare">
+                        <div class="shareIconContainer">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="13"
+                            >
+                                <path
+                                    fill="#6E8098"
+                                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                                    class="shareIcon"
+                                />
+                            </svg>
+                        </div>
+
+                        <div class="authorShareBox">
+                            <span class="shareBoxText">SHARE</span>
+
+                            <a href="#"
+                                ><img
+                                    src="images/icon-facebook.svg"
+                                    alt="Share on Facebook"
+                            /></a>
+                            <a href="#"
+                                ><img
+                                    src="images/icon-twitter.svg"
+                                    alt="Share on Twitter"
+                            /></a>
+                            <a href="#">
+                                <img
+                                    src="images/icon-pinterest.svg"
+                                    alt="Share on Pinterest"
+                            /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <script src="script.js"></script>
+    </body>
+</html>
